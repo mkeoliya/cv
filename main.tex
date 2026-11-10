@@ -228,42 +228,42 @@
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Research Interests}
-I aim to enhance the safety and adoption of ML models in healthcare by (1) developing new interpretable models for critical applications like cancer treatment prediction and sepsis detection, (2) enabling multi-modal reasoning over diverse clinical data sources, and (3) ensuring these models are explainable and trusted by clinicians in high-stakes decisions.
+I build time-series foundation models for cardiology that forecast adverse cardiac events, such as arrhythmias and cardiac arrest, from continuous ECG monitoring before they occur. I work closely with cardiologists at Penn Medicine to make these models accurate, stable, and trustworthy enough for prospective deployment at the bedside.
 
 %-----------RESEARCH-----------
 \section{Publications}
   \vspace{-0.4cm}
-  \begin{scriptsize}\faTrophy \; Distinguished/Spotlight Paper\end{scriptsize}
+  \begin{scriptsize}\faTrophy \; Distinguished/Spotlight Paper \quad * Equal contribution \quad \textdagger \; Joint supervision\end{scriptsize}
   
   \resumeSubHeadingListStart
     \resumePubSubheading
-      {CAMEL: An ECG Language Model
-for Forecasting Cardiac Events}
-      {\href{https://arxiv.org/abs/2510.1428}{\faFilePdf[regular]}}
-  {\textbf{Mayank Keoliya}, Seewon Choi, Eric Wong, Rajeev Alur, Mayur Naik}
-      {Under submission}
-      
-      \resumePubSubheading
-      {Stable Prediction of Adverse Events in Medical Time-Series Data}
-      {\href{https://arxiv.org/abs/2510.1428}{\faFilePdf[regular]}}
-  {\textbf{Mayank Keoliya}*, Seewon Choi*, Eric Wong, Rajeev Alur, Mayur Naik}
-      {Under submission}
+      {Forecasting Shockable In-Hospital Cardiac Arrest from Continuous Telemetry}
+      {\href{https://openreview.net/forum?id=Xpo7k7exva}{\faFilePdf[regular]}}
+  {Seewon Choi*, \textbf{Mayank Keoliya}*, Neelay Velingker*, Alaia Solko-Breslin, Alireza Oraii, Sameed Ahmed M. Khatana, Mayur Naik, Gary E. Weissman, Eric Wong, Rajeev Alur\textsuperscript{\textdagger}, Rajat Deo\textsuperscript{\textdagger}}
+      {ML4H '26 (Findings Track)}
+
+    \resumePubSubheading
+      {Assessing Evolving Risk of Adverse Clinical Events}
+      {\href{https://openreview.net/forum?id=30XSoFLfD7}{\faFilePdf[regular]}}
+  {Seewon Choi*, \textbf{Mayank Keoliya}*, Mayur Naik, Eric Wong, Rajeev Alur}
+      {ML4H '26 (Proceedings Track)}
+
 
             \resumePubSubheading
-      {An ECG Large-language Model for Detecting Atrial Fibrillation}\\
+      {An ECG Large-language Model for Detecting Atrial Fibrillation}{}
   {\textbf{Mayank Keoliya}*, Seewon Choi*, Eric Wong, Rajeev Alur, Mayur Naik}
       {Heart Rhythm '26}
 
     \resumePubSubheading
       {ESCA: Contextualizing Embodied Agents via Scene-Graph Generation}
       {\faTrophy[regular]}
-  {Jiani Huang, \textbf{Mayank Keoliya}, Neelay Velingker, Ziyang Liu, Matthew Kuo, Amish Sethi, Mayur Naik, Sernam Lim}
+  {Jiani Huang, \textbf{Mayank Keoliya}, Neelay Velingker, JungHo Jung, Ziyang Li, Matthew Kuo, Amish Sethi, Mayur Naik, Ser-Nam Lim}
       {NeurIPS '25}
 
       \resumePubSubheading
       {Synthesizing Faithful Explanations for Treatment Effect Estimation}
       {\href{https://www.seas.upenn.edu/~mkeoliya/assets/pdf/icml_2024_paper.pdf}{\faFilePdf[regular] \faTrophy[regular]}}
-      {Yinjun Wu*, \textbf{Mayank Keoliya}*, Kan Chen, Neelay Velingker, Emily Getzen, Qi Long, Mayur Naik, Ravi Parikh}
+      {Yinjun Wu*, \textbf{Mayank Keoliya}*, Kan Chen, Neelay Velingker, Ziyang Li, Emily Getzen, Qi Long, Mayur Naik, Ravi Parikh, Eric Wong}
       {ICML '24}
 
     \resumePubSubheading
@@ -282,12 +282,11 @@ for Forecasting Cardiac Events}
 
 \section{Ongoing Projects}
     \resumeSubHeadingListStart
-    \resumePrjSubheadingNoURL{Trustworthy AI for Early Sepsis Detection and Breast Cancer Treatment}
-    
-    Lead PhD student on a \href{asset.seas.upenn.edu/penn-granted-7m-4-year-award-from-arpa-h-to-deve-ai-in-medicine/}{ARPA-H grant} to develop trustworthy AI for early sepsis prediction, and treatment recommendation for breast cancer. Working with clinicians at Penn to train and deploy explainable yet accurate models on data from 300K patients across Pennsylvania. 
+    \resumePrjSubheadingNoURL{Prospective Deployment of CAMEL at Penn Medicine}
+    {Deploying CAMEL, our ECG language model for forecasting cardiac events, in a prospective study across 250 beds at Penn Medicine, in collaboration with Penn cardiologists (\href{https://ai.upenn.edu/using-ai-help-predict-cardiac-arrests}{Penn AI coverage}).}
 
-    \resumePrjSubheadingNoURL{Explainable Mortality Prediction}{} 
-    Applying our ICML '24 work, DISCRET to mortality prediction. Our model generates explanations, which are quantitatively more robust and faithful than traditional post-hoc methods like LIME and SHAP. Currently in user studies with over 50 oncologists at Penn Medicine and other health systems.
+    \resumePrjSubheadingNoURL{Benchmarking Reasoning over Real-World EHR Records}
+    {Building a new benchmark that evaluates how well models reason over real-world electronic health records.}
 
 
     \resumeSubHeadingListEnd
@@ -322,7 +321,6 @@ for Forecasting Cardiac Events}
         \resumeAwardItem{\textbf{GIC Medal}, NUS Honors College (best computing student)}{2023}
         \resumeAwardItem{\textbf{President's Honour Roll}, NUS Honors College}{2023}
         \resumeAwardItem{\textbf{SIGPLAN-M Travel Grant}}{2022}
-        \resumeAward
         
     \resumeItemListEnd
 
@@ -357,12 +355,12 @@ for Forecasting Cardiac Events}
         \hfill
         & 
         \begin{tabular}{l}
-            \textbf{\href{https://ilyasergey.net/}{Dr. Ravi B Parikh}} (Collaborator) \\
-            Associate Professor \\
-            School of Medicine \\
-            Emory University  \\
-            \href{mailto:ravi.bharat.parikh@emory.edu}
-            {\footnotesize \faEnvelope[regular] \normalsize \thinspace \thinspace ravi.bharat.parikh@emory.edu} \\
+            \textbf{\href{https://www.med.upenn.edu/apps/faculty/index.php/g275/p8201040}{Dr. Rajat Deo}} (Collaborator) \\
+            Professor of Medicine (Cardiovascular Medicine) \\
+            Perelman School of Medicine \\
+            University of Pennsylvania  \\
+            \href{mailto:rajat.deo@uphs.upenn.edu}
+            {\footnotesize \faEnvelope[regular] \normalsize \thinspace \thinspace rajat.deo@uphs.upenn.edu} \\
         \end{tabular}
     \end{tabular*}
 \end{document}
