@@ -1,0 +1,368 @@
+%-------------------------
+% Resume in Latex.
+% Heavily based on Jia Yang's : https://www.overleaf.com/latex/templates/beautiful-cv-with-fontawesome-integration/pswqpmnzbshp
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin = 1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+%--------------UNDERLINING---------------
+% taken from https://alexwlchan.net/2017/10/latex-underlines/
+
+\usepackage{contour}
+\usepackage{ulem}
+
+\renewcommand{\ULdepth}{3.8pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+%----------------------------------------
+
+\graphicspath{ {./Images/} }
+
+%----------FONT OPTIONS----------
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    {\color{gray}\titlerule}
+    \vspace{4pt}
+    \scshape\raggedright\Large
+}{}{0pt}{}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-2pt}
+  \item
+    \textbf{#1}\\
+    \textit{\small#3} \hfill \textit{\small #4}
+}
+
+\newcommand{\resumeWESubheading}[4]{
+\vspace{-2pt}
+  \item
+    \href{#2}{\textbf{#1}}\\
+    \textit{\small#3} \hfill \textit{\small #4}
+}
+
+\newcommand{\resumeTESubheading}[4]{
+\vspace{-2pt}
+  \item
+    \href{#2}{\textbf{#1}}\\
+    \textit{\small#3} \hfill \textit{\small #4}
+}
+
+\newcommand{\resumeEduSubheading}[4]{
+\vspace{-2pt}
+  \item
+    \href{#2}{\textbf{#1}} \hfill \textit{\small #3}\\
+    \textit{\small{#2}} \\
+    \small{#4}
+}
+
+\newcommand{\resumeEduSubheadingThesis}[5]{
+\vspace{-2pt}
+  \item
+    \href{#2}{\textbf{#1}} \hfill \textit{\small #3}\\
+    \textit{\small{#2}} \\
+    \small{#4} \\
+    \small{#5}
+}
+
+\newcommand{\resumePubSubheading}[4]{
+\vspace{-2pt}
+  \item
+    \textbf{#1} {\small #2} \\
+    {\small#3} \\ \textit{\small #4}
+}
+
+\newcommand{\resumePubSubheadingArxiv}[3]{
+\vspace{-2pt}
+  \item
+    \textbf{#1} {\small #2} \\
+    {\small#3}
+}
+
+\newcommand{\resumePrepPubSubheading}[2]{
+\vspace{-2pt}
+  \item
+    \textbf{#1} \\
+    \textit{\small #2}
+}
+
+\newcommand{\resumePrjSubheading}[3]{
+\vspace{-2pt}
+  \item
+    \textbf{#1} \\
+    \textit{\small #2} \\
+    \small #3
+}
+
+\newcommand{\resumePrjSubheadingNoURL}[2]{
+\vspace{-2pt}
+  \item
+    \textbf{#1} \\
+    \small #2
+}
+
+\newcommand{\resumeSkillSubheading}[2]{
+\vspace{-2pt}
+  \item
+      \textbf{#1 :} {#2}
+}
+
+\newcommand{\resumeSubSubheading}[3]{
+    \item
+      {#1} \hfill \textit{\small #2} \\ \textit{\small#3} \\
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubPubHeadingListStart}{\begin{enumerate}[]}
+\newcommand{\resumeSubPubHeadingListEnd}{\end{enumerate}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\newcommand{\resumeAwardItem}[2]{
+  \item \small{\vspace{-7pt}
+    {#1\hfill{#2}\\}
+  }
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+%----------HEADING----------
+
+{\Huge Mayank Keoliya}
+\\
+\vspace{3pt}
+
+\href{mailto:mkeoliya@upenn.edu}{
+    \faEnvelope[regular]
+    mkeoliya@upenn.edu} $|$
+\href{https://www.linkedin.com/in/mayank-keoliya-021048194/}{
+    \faLinkedin
+    \thinspace \thinspace        
+    mayank-keoliya} $|$
+\href{https://github.com/mkeoliya}{
+    \faGithub
+    \thinspace \thinspace
+    mkeoliya} $|$
+\href{https://www.seas.upenn.edu/~mkeoliya}{
+    \faGlobe
+    \thinspace \thinspace
+    seas.upenn.edu/\textasciitilde{}mkeoliya
+}
+\vspace{-4pt}
+%---------------Education-------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEduSubheading
+      {University of Pennsylvania}
+      {PhD, Computer and Information Science}
+      {Aug. 2023 -- Present}
+      {Advisor: Mayur Naik}
+
+      
+    \resumeEduSubheading
+      {National University of Singapore}
+      {Bachelor's in Computer Science}
+      {Aug. 2019 -- May 2023}
+      {Advisor: Ilya Sergey}
+      
+      
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Research Interests}
+I aim to enhance the safety and adoption of ML models in healthcare by (1) developing new interpretable models for critical applications like cancer treatment prediction and sepsis detection, (2) enabling multi-modal reasoning over diverse clinical data sources, and (3) ensuring these models are explainable and trusted by clinicians in high-stakes decisions.
+
+%-----------RESEARCH-----------
+\section{Publications}
+  \vspace{-0.4cm}
+  \begin{scriptsize}\faTrophy \; Distinguished/Spotlight Paper\end{scriptsize}
+  
+  \resumeSubHeadingListStart
+    \resumePubSubheading
+      {CAMEL: An ECG Language Model
+for Forecasting Cardiac Events}
+      {\href{https://arxiv.org/abs/2510.1428}{\faFilePdf[regular]}}
+  {\textbf{Mayank Keoliya}, Seewon Choi, Eric Wong, Rajeev Alur, Mayur Naik}
+      {Under submission}
+      
+      \resumePubSubheading
+      {Stable Prediction of Adverse Events in Medical Time-Series Data}
+      {\href{https://arxiv.org/abs/2510.1428}{\faFilePdf[regular]}}
+  {\textbf{Mayank Keoliya}*, Seewon Choi*, Eric Wong, Rajeev Alur, Mayur Naik}
+      {Under submission}
+
+            \resumePubSubheading
+      {An ECG Large-language Model for Detecting Atrial Fibrillation}\\
+  {\textbf{Mayank Keoliya}*, Seewon Choi*, Eric Wong, Rajeev Alur, Mayur Naik}
+      {Heart Rhythm '26}
+
+    \resumePubSubheading
+      {ESCA: Contextualizing Embodied Agents via Scene-Graph Generation}
+      {\faTrophy[regular]}
+  {Jiani Huang, \textbf{Mayank Keoliya}, Neelay Velingker, Ziyang Liu, Matthew Kuo, Amish Sethi, Mayur Naik, Sernam Lim}
+      {NeurIPS '25}
+
+      \resumePubSubheading
+      {Synthesizing Faithful Explanations for Treatment Effect Estimation}
+      {\href{https://www.seas.upenn.edu/~mkeoliya/assets/pdf/icml_2024_paper.pdf}{\faFilePdf[regular] \faTrophy[regular]}}
+      {Yinjun Wu*, \textbf{Mayank Keoliya}*, Kan Chen, Neelay Velingker, Emily Getzen, Qi Long, Mayur Naik, Ravi Parikh}
+      {ICML '24}
+
+    \resumePubSubheading
+      {Mostly Automated Proof Repair for Verified Libraries}
+      {\href{https://www.seas.upenn.edu/~mkeoliya/assets/pdf/pldi_2023_paper.pdf}{\faFilePdf[regular] \faTrophy[regular]}}
+      {Kiran Gopinathan, \textbf{Mayank Keoliya}, Ilya Sergey}
+      {PLDI '23}
+
+    \resumePubSubheading
+      {Simulating Noisy Channels for DNA Storage}
+      {\href{https://www.seas.upenn.edu/~mkeoliya/assets/pdf/ispass_2022_poster.pdf}{\faFilePdf[regular]}}
+      {\textbf{Mayank Keoliya}, Puru Sharma, and Djordje Jevdjic}
+      {ISPASS '22}
+      
+  \resumeSubHeadingListEnd
+
+\section{Ongoing Projects}
+    \resumeSubHeadingListStart
+    \resumePrjSubheadingNoURL{Trustworthy AI for Early Sepsis Detection and Breast Cancer Treatment}
+    
+    Lead PhD student on a \href{asset.seas.upenn.edu/penn-granted-7m-4-year-award-from-arpa-h-to-deve-ai-in-medicine/}{ARPA-H grant} to develop trustworthy AI for early sepsis prediction, and treatment recommendation for breast cancer. Working with clinicians at Penn to train and deploy explainable yet accurate models on data from 300K patients across Pennsylvania. 
+
+    \resumePrjSubheadingNoURL{Explainable Mortality Prediction}{} 
+    Applying our ICML '24 work, DISCRET to mortality prediction. Our model generates explanations, which are quantitatively more robust and faithful than traditional post-hoc methods like LIME and SHAP. Currently in user studies with over 50 oncologists at Penn Medicine and other health systems.
+
+
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+  
+    \resumeWESubheading
+      {\href{https://verse-lab.github.io/}{VERSE Lab, NUS}}{}
+      {Research Assistant}{May 2022 -- April 2023}
+      \vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Part of team that devised a novel proof repair technique which enables dynamic certification of critical systems such as financial trading and aircraft navigation}
+        \resumeItem{Designed and implemented an efficient invariant synthesis algorithm}
+        \resumeItem{Work published at PLDI '23}
+      \resumeItemListEnd
+    \resumeWESubheading
+      {Jevdjic Lab, NUS}{}
+      {Research Assistant}{Aug 2021 -- May 2022}
+      \vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Investigated noise in DNA sequencing, particularly with next-gen Nanopore sequencing}
+        \resumeItem{Discovered key insights about the relationship between sequencing errors and molecule position within a DNA strand, published at ISPASS'22} 
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Awards}
+    \resumeItemListStart
+        \resumeAwardItem{\textbf{Outstanding Undergraduate Researcher}, NUS (top 5 in a cohort of 6k)}{2023}
+        \resumeAwardItem{\textbf{GIC Medal}, NUS Honors College (best computing student)}{2023}
+        \resumeAwardItem{\textbf{President's Honour Roll}, NUS Honors College}{2023}
+        \resumeAwardItem{\textbf{SIGPLAN-M Travel Grant}}{2022}
+        \resumeAward
+        
+    \resumeItemListEnd
+
+\section{Teaching Experience}
+    \resumeSubHeadingListStart
+        \resumeTESubheading
+            {Head TA, Software Analysis, CIS 547}{}
+            {University of Pennsylvania}{Aug 2025 -- Dec. 2025}
+          \resumeTESubheading
+            {TA, Advanced Functional Programming, CIS 552}{}
+            {University of Pennsylvania}{Aug 2024 -- Dec. 2024}
+            
+        \resumeTESubheading
+            {TA, Intro to Programming, CS1101S}{}
+            {National University of Singapore}{Aug 2020 -- Dec. 2020}
+    \resumeSubHeadingListEnd
+
+
+\section{References}
+    % \setlength\tabcolsep{}
+    \hskip+0.15in\begin{tabular*}{0.97\textwidth{}}{l@{\extracolsep{\fill}}l}
+        \begin{tabular}{l}
+            \textbf{\href{https://seas.upenn.edu/~mhnaik}{Mayur Naik}} (PhD Advisor) \\
+            Professor and Graduate Chair \\
+            Computer and Information Science \\
+            University of Pennsylvania \\
+            \href{mailto:mhnaik@seas.upenn.edu}
+            {\footnotesize \faEnvelope[regular] \normalsize \thinspace \thinspace mhnaik@seas.upenn.edu} \\
+            \footnotesize \faPhone* \normalsize \thinspace \thinspace
+            \href{tel:215-573-1856}{215-573-1856}
+        \end{tabular}
+        \hfill
+        & 
+        \begin{tabular}{l}
+            \textbf{\href{https://ilyasergey.net/}{Dr. Ravi B Parikh}} (Collaborator) \\
+            Associate Professor \\
+            School of Medicine \\
+            Emory University  \\
+            \href{mailto:ravi.bharat.parikh@emory.edu}
+            {\footnotesize \faEnvelope[regular] \normalsize \thinspace \thinspace ravi.bharat.parikh@emory.edu} \\
+        \end{tabular}
+    \end{tabular*}
+\end{document}
